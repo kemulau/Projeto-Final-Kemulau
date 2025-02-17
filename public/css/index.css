@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo do documento */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Título principal */
+h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Títulos secundários */
+h2 {
+    font-size: 1.8em;
+    color: #3498db;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Estilizando as listas */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #2980b9;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #1abc9c;
+}
+
+/* Adicionando bordas e espaçamento ao conteúdo */
+ul li {
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
