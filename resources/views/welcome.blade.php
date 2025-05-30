@@ -11,7 +11,7 @@
     <style>
         /* Estilização personalizada */
         body {
-            background-color: #E8F5E9; /* Verde claro suave */
+            background-color:rgba(255, 94, 0, 0.27); 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -30,7 +30,7 @@
         }
 
         .login-container img {
-            width: 80px;
+            width: 150px;
             margin: 0 auto 10px;
         }
 
@@ -63,7 +63,7 @@
         }
 
         .btn-register {
-            background: #FFA000;
+            background:rgb(255, 145, 0);
             color: white;
         }
 
@@ -79,7 +79,7 @@
         <img src="{{ asset('img/logo.png') }}" alt="Logo" onerror="this.onerror=null; this.src='/fallback-logo.png'">
 
         <!-- Título -->
-        <h2 class="login-title">Bem-vindo ao Sistema de Estoque</h2>
+        <h2 class="text-orange-800 text-lg md:text-2xl lg:text-2xl">Bem-vindo(a) ao Sistema</h2>
 
         <!-- Verificação de autenticação -->
         @auth

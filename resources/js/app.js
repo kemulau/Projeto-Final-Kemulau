@@ -1,5 +1,6 @@
 import './bootstrap';
 
+
 document.addEventListener("DOMContentLoaded", function() {
     const dropdownBtn = document.getElementById("dropdownBtn");
     const dropdownMenu = document.getElementById("dropdownMenu");

@@ -16,6 +16,8 @@ export default {
             },
         },
     },
-
+    safelist: [
+        'md:flex', // força manter no build final
+    ],
     plugins: [forms],
 };

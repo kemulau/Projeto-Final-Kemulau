@@ -1,0 +1,36 @@
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+</head>
+
+<x-app-layout>
+    <x-slot name="header">
+        <div class="header-bg text-white py-3 px-4 shadow-sm" style="background-color: #ad5604;">
+            <h2 class="mb-0 text-xl font-weight-bold">
+                <i class="fas fa-file-invoice-dollar mr-2"></i> Detalhes da Compra
+            </h2>
+        </div>
+    </x-slot>
+
+    <div class="py-4 max-w-4xl mx-auto">
+        <div class="bg-white p-6 rounded shadow text-dark">
+            <p class="text-lg font-semibold">
+                Compra #{{ $compra->id }} em {{ $compra->created_at->format('d/m/Y H:i') }}
+            </p>
+
+            <ul class="mt-4 space-y-2">
+                @foreach ($compra->itens as $item)
+                    <li class="d-flex justify-content-between border-bottom py-2">
+                        <span>{{ $item->produto->nome }} (x{{ $item->quantidade }})</span>
+                        <span>R$ {{ number_format($item->preco_unitario * $item->quantidade, 2, ',', '.') }}</span>
+                    </li>
+                @endforeach
+            </ul>
+
+            <div class="mt-4 text-right font-weight-bold">
+                Total: R$ {{ number_format($compra->total, 2, ',', '.') }}
+            </div>
+        </div>
+    </div>
+</x-app-layout>
